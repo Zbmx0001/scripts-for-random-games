@@ -1,0 +1,9 @@
+--[[
+    https://www.roblox.com/games/12413830324/Stud-Jump-Obby
+    OMAGAD! NEW SCRIPX O MA GAD
+]]
+
+for i = 1,99e+99 do
+    wait()
+    game.ReplicatedStorage.Remote_Events.Add_Jump:FireServer(game.Players.LocalPlayer.General.Last_Add_Jump.Value + i)
+end
