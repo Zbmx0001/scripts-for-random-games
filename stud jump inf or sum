@@ -4,6 +4,8 @@
 ]]
 
 for i = 1,99e+99 do
-    wait()
-    game.ReplicatedStorage.Remote_Events.Add_Jump:FireServer(game.Players.LocalPlayer.General.Last_Add_Jump.Value + i)
+    while game:GetService("RunService").Stepped:Wait() do
+        game:GetService("ReplicatedStorage"):WaitForChild("Remote_Events"):WaitForChild("Add_Jump"):FireServer(game.Players.LocalPlayer.General.Last_Add_Jump.Value + i)
+    end
 end
+
